@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <main class="contenedor">
+    <section class="izq">
+
+      <div class="pago">
+        <label class="bill">Bill </label>
+        <input type="number" min="0" placeholder="0" dir="rtl" required class="dolares" >
+      </div>
+
+      <div class="porcentajes">
+        <label class="bill">Select Tip %</label>
+        <div class="numeros">
+          <button class="caja" value="5">5% </button>
+          <button class="caja" value="10">10%</button>
+          <button class="caja" value="15">15%</button>
+          <button class="caja" value="25">25%</button>
+          <button class="caja" value="50">50%</button>
+          <input  type="number" min="0" placeholder="Custom" class="cajita blanco" step="1"></input>
+        </div>
+      </div>
+      <div class="numPersonas">
+        <label class="bill">Number of People : <span id="error"></span></label>
+        
+        <input  class="person" type="number" placeholder="0" min="0" dir="rtl"   required  step="1">
+      </div>
+
+      </div>
+    </section>
+    <article class="der">
+      <div class="totalMontar">
+        <p class="amount">Tip Amount <br> <span class="amountPerson">/ person</span></p>
+        <div class="totalAmount"><span>$</span>0.00</div>
+      </div>
+      <div class="totalPersona">
+        <p class="amountPersona">Total <br>  <span class="amountPerson">/ person</span></p>
+        <div class="totalAmountPersona"><span>$</span>0.00</div>
+      </div>
+      <button class="reset">RESET</button>
+
+
+    </article>
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Andrejico</a>.
+      </div>
+    </footer>
+
+  </main>
+
+
+
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

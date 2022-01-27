@@ -1,0 +1,329 @@
+/*importamos la url que es la fuente que nos pide, centramos el contenedor con flex y el contenedor que es el principal div con grid, tendra dos lados
+el izquierdo y derecho, estos usarán flex para ordenar los elementos y con ayuda position relative y absolute conseguimos como queda en el reto*/
+
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Space Mono", monospace;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	background: url("../images/logo.svg") no-repeat hsl(185, 41%, 84%) 50% 10%;
+}
+
+.contenedor {
+	background-color: rgb(255, 255, 255);
+	display: grid;
+	grid-template-columns: 0fr 1fr 0fr 1fr;
+	grid-template-rows: 0fr 0fr 0fr;
+	gap: 2rem 1rem;
+	border-radius: 2rem;
+	width: 90vh;
+	grid-template-areas:
+		". . . ."
+		"izq izq der der"
+		"footer footer footer footer";
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.izq {
+	grid-area: izq;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-left: 40px;
+	align-content: center;
+	justify-content: space-around;
+}
+
+.porcentajes
+{
+	padding-right: 40px;
+}
+
+label {
+	display: inline-block;
+	text-align: left;
+	width: 320px;
+	margin-bottom: 10px;
+	color: hsl(186, 14%, 43%);
+	font-size: 14px;
+	font-weight: 700;
+}
+input:focus
+{
+    outline:solid 2px hsl(172, 67%, 45%);
+
+}
+
+
+.dolares {
+	border: none;
+	height: 5vh;
+	width: 21rem;
+	background: url("../images/icon-dollar.svg") no-repeat scroll 15px 14px;
+	padding-left: 30px;
+	padding-right: 20px;
+	border-radius: 5px;
+	background-color: hsl(189, 41%, 97%);
+	text-align: right;
+	cursor: pointer;
+	font-weight: 700;
+	color: hsl(183, 100%, 15%);
+	font-size: 18px;
+}
+
+.dolares::placeholder {
+	color: hsl(183, 100%, 15%);
+}
+
+.person {
+	border: none;
+	height: 5vh;
+	width: 21rem;
+	background: url("../images/icon-person.svg") no-repeat scroll 15px 13px;
+	padding-left: 30px;
+	padding-right: 20px;
+	border-radius: 5px;
+	background-color: hsl(189, 41%, 97%);
+	text-align: right;
+	cursor: pointer;
+	font-weight: 700;
+	color: hsl(183, 100%, 15%);
+	font-size: 18px;
+}
+
+.person::placeholder {
+	color: hsl(183, 100%, 15%);
+}
+
+
+.der {
+	grid-area: der;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-evenly;
+	background-color: hsl(183, 100%, 15%);
+	border: none;
+	border-radius: 1rem;
+	margin-right: 30px;
+	height: 45vh;
+	padding-right: 46px;
+}
+
+.numeros {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 21rem;
+	justify-content: space-between;
+}
+
+.caja {
+	background-color: hsl(183, 100%, 15%);
+	border: none;
+	border-radius: 0.2rem;
+	color: hsl(189, 41%, 97%);
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 5px;
+	text-align: center;
+	line-height: 20px;
+	width: 100px;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.cajita
+{
+	background-color: hsl(183, 100%, 15%);
+	border: none;
+	border-radius: 0.2rem;
+	color: hsl(189, 41%, 97%);
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 5px;
+	text-align: center;
+	line-height: 20px;
+	width: 100px;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 20px;
+	height: 40px;
+}
+
+.caja:hover
+{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);    
+    opacity: 1;
+}
+
+.caja:focus
+{
+	background-color: hsl(185, 41%, 84%);
+	color:hsl(183, 100%, 15%);
+}
+
+.activo
+{
+	background-color: hsl(185, 41%, 84%);
+	color:hsl(183, 100%, 15%);
+}
+
+
+.blanco {
+	background-color: hsl(183deg 49% 94%);
+	color: hsl(183, 100%, 15%);
+}
+
+.blanco::placeholder
+{
+	color: hsl(183, 100%, 15%);
+	font-size: 20px;
+	position: absolute;
+	right: 10px;
+
+}
+
+.totalMontar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.totalPersona {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 85px;
+}
+.amount {
+	font-size: 14px;
+	font-family: "Space Mono", sans-serif;
+	color: #fff;
+	font-weight: 700;
+	margin-right: 55px;
+}
+
+.amountPerson {
+	opacity: 0.5;
+}
+
+.totalAmount {
+	font-size: 30px;
+	font-family: "Space Mono", sans-serif;
+	font-weight: 700;
+	position: relative;
+	left: 50px;
+	color: hsl(172, 67%, 45%);
+}
+
+.amountPersona {
+	font-size: 14px;
+	font-family: "Space Mono", sans-serif;
+	color: #fff;
+	font-weight: 700;
+	margin-right: 70px;
+}
+
+.totalAmountPersona {
+	font-size: 30px;
+	font-family: "Space Mono", sans-serif;
+	color: hsl(184, 14%, 56%);
+	font-weight: 700;
+	position: relative;
+	left: 50px;
+	color: hsl(172, 67%, 45%);
+}
+
+.reset {
+	margin-left: 41px;
+	padding: 15px;
+	border: none;
+	border-radius: 5px;
+	background-color: hsl(184, 14%, 56%);
+	font-size: 16px;
+	color: hsl(183, 100%, 15%);
+	font-weight: 700;
+	width: 280px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.reset:hover
+{
+    background-color: hsl(185, 41%, 84%);
+    opacity: 1;
+}
+
+#error
+{
+	font-size: 14px;
+	color: rgb(238, 79, 79);
+	text-align: right;
+	margin-left: 45px;
+}
+
+footer {
+	grid-area: footer;
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/*media query*/
+
+@media (max-width: 850px) 
+{
+
+	.contenedor
+	{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		width: 50vh;
+		padding-left: 30px;
+	}
+	.porcentajes
+	{
+		padding-right: 75px;
+	}
+	
+	label
+	{
+		display: inline-block;
+		text-align: left;
+		width: 320px;
+		margin-bottom: 10px;
+		color: hsl(186, 14%, 43%);
+		font-size: 14px;
+		font-weight: 700;
+		margin-top: 25px;
+	}
+
+}
